@@ -413,8 +413,8 @@ extern void tananglerat( _Inout_ PRAT *px, ANGLE_TYPE angletype, uint32_t radix,
 
 extern void _dupnum(_In_ PNUMBER dest, _In_ PNUMBER src);
 
-extern void _destroynum( _In_ PNUMBER pnum );
-extern void _destroyrat( _In_ PRAT prat );
+extern void _destroynum( _Frees_ptr_opt_ PNUMBER pnum );
+extern void _destroyrat( _Frees_ptr_opt_ PRAT prat );
 extern void addnum( _Inout_ PNUMBER *pa, _In_ PNUMBER b, uint32_t radix);
 extern void addrat( _Inout_ PRAT *pa, _In_ PRAT b, int32_t precision);
 extern void andrat( _Inout_ PRAT *pa, _In_ PRAT b, uint32_t radix, int32_t precision);
